@@ -1,8 +1,9 @@
 #program to encrypt data using Caesar Cipher
 str1=input("Enter the string which you want to encode:")            #taking input of the string to be encrypted
 n=int(input("Enter the number by which you want to shift it(1-26):"))     #taking input of the number by which user wants to shift each character of the string
-if n>26 or n<1:
+while n>26 or n<1:
     print("Invalid Input!!!")
+    n=int(input("Enter the number by which you want to shift it(1-26):"))
 l=list(str1)                                                        #splitting the input string
 strf=''
 #iterating through the list to shift the characters
@@ -18,6 +19,3 @@ for i in l:
             p=(p-90)+64
     strf+=chr(p)                #concatenating the string for the final answer
 print(strf)
-
-   
-    
